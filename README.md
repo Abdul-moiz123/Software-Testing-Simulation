@@ -74,13 +74,22 @@ The Part 2B interface intentionally contains **textbook numericals only**. Custo
 
 ## Verification
 
-Self-Check questions with explicit worked answers can show:
+The application now verifies **every applicable numerical automatically**.
+
+- **Book Worked Answer** is used only when Chapter 10 explicitly prints a worked Self-Check answer.
+- **Expected / Manual Result** is used for Application/Review exercises whose numerical result is computed from the textbook's supplied data and formulas.
+
+This avoids incorrectly labeling a software-derived value as an official book answer.
+
+Self-Check questions with explicit worked answers show:
 
 ```text
 Book Answer | Python Result | Difference | VERIFIED
 ```
 
-Application/review exercises without a worked answer are labeled for comparison with the student's handwritten Part 2A solution.
+Application/review exercises now show an **Expected / Manual Result vs Python Result** table and a **COMPUTATION VERIFIED** status. The student's Part 2A handwritten work can then be checked against the same expected result.
+
+For OC-curve questions, the book asks for a value read from a graph. The application calculates the corresponding binomial probability numerically, so a visually read graph value may differ slightly because of graph-reading/rounding.
 
 ## Project Structure
 
